@@ -249,27 +249,97 @@ This repository contains the accompanying codes and other ancillary files of the
 
 ## Qualitative results
 <style>
-    .scatter_plt {
-    max-width: 120px;
+.column {
+  float: left;
+  width: 16%;
+  padding: 5px;
 }
-.joint_plt {
-    max-width: 100px;
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
 ### Davis
-#### ECFP8-PSC
-##### Warm
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" class="scatter_plt"/>
 
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" class="joint_plt"/>
+#### Warm split
+<div class="row">
+    <!-- ecfp -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" style="width:75%">
+  </div>
+    <!-- graphconv -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" style="width:75%">
+  </div>
+  
+    <!-- ivpgan -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="Mountains" style="width:75%">
+  </div>
+</div>
 
-##### Cold drug
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" class="scatter_plt" />
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" class="joint_plt"/>
+#### Cold drug split
+<div class="row">
+    <!-- ecfp -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" alt="Forest" style="width:75%">
+  </div>
+    <!-- graphconv -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_joint.png" alt="Mountains" style="width:75%">
+  </div>
+  
+    <!-- ivpgan -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_joint.png" alt="Mountains" style="width:75%">
+  </div>
+</div>
 
-##### Cold target
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" class="scatter_plt"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" class="joint_plt" />
+#### Cold target split
+<div class="row">
+    <!-- ecfp -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png//davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" alt="Forest" style="width:75%">
+  </div>
+    <!-- graphconv -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_joint.png" alt="Mountains" style="width:75%">
+  </div>
+  
+    <!-- ivpgan -->
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_true-vs-pred.png" alt="Mountains" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_joint.png" alt="Mountains" style="width:75%">
+  </div>
+</div>
 
 
 # Credits
