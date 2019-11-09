@@ -1,0 +1,1 @@
+python singleview.py --dataset metz --prot_desc_path ../../data/metz_data/prot_desc.csv --model_dir ./model_dir/metz --filter_threshold 1 --split_warm --view ecfp8 --eval --eval_model_name metz_ecfp4_model-2019_07_19__03_56_10_warm_0.2459.mod --fold_num 5

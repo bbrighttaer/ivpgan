@@ -1,0 +1,1 @@
+python train_joint_gan.py --dataset davis --fold_num 5 --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --split_warm --eval --eval_model_name davis_integrated_view_gan_model-2019_08_05__03_12_03_warm_90_0.4325.mod

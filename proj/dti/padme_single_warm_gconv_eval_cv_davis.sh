@@ -1,0 +1,1 @@
+python singleview.py --dataset davis --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --split_warm --view gconv --fold_num 5 --eval --eval_model_name gconv_model-2019_07_17__02_50_06_warm_0.3099.mod

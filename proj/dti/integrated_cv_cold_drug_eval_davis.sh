@@ -1,0 +1,1 @@
+python train_joint.py --dataset davis --fold_num 5 --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --cold_drug --eval --eval_model_name kiba_ecfp4_model-2019_07_19__11_34_39_cold_drug_0.0000.mod

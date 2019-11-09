@@ -1,0 +1,1 @@
+python singleview.py --dataset davis --fold_num 5 --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/model_dir_davis_cd --filter_threshold 1 --split_warm --hparam_search --hparam_search_alg random_search --view ecfp

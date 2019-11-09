@@ -1,0 +1,1 @@
+python singleview.py --dataset davis --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --split_warm --view ecfp4 --eval --eval_model_name davis_ecfp2_model-2019_07_19__15_53_25_warm_0.4062.mod --fold_num 5

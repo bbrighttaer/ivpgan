@@ -1,0 +1,1 @@
+python singleview.py --dataset davis --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --cold_target --view ecfp8 --fold_num 5 --eval --eval_model_name davis_ecfp8_model-2019_08_04__23_02_13_cold_target_3_-0.0418.mod

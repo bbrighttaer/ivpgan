@@ -1,0 +1,1 @@
+python train_joint.py --dataset davis --fold_num 5 --prot_desc_path ../../data/davis_data/prot_desc.csv --model_dir ./model_dir/davis --filter_threshold 6 --split_warm --eval --eval_model_name davis_integrated_view_model-2019_07_28__01_26_46_warm_-1_0.4235.mod
