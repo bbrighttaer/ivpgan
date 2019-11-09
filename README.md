@@ -252,12 +252,14 @@ This repository contains the accompanying codes and other ancillary files of the
 ### Davis
 
 #### Warm split
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png&s=100x)
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="Snow" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="Mountains" width="200"/>
+</p>
 
 #### Cold drug split
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" alt="Snow" width="200"/>
