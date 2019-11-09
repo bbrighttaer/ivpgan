@@ -248,15 +248,11 @@ This repository contains the accompanying codes and other ancillary files of the
 </table>
 
 ## Qualitative results
-var md = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typography: true
-}).use(require('markdown-it-imsize')); 
+
 ### Davis
 
 #### Warm split
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png =200x)
+![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png&s=100x)
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" width="200"/>
