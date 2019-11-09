@@ -262,20 +262,24 @@ This repository contains the accompanying codes and other ancillary files of the
 </p>
 
 #### Cold drug split
+<p>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" alt="Snow" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" alt="Forest" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_true-vs-pred.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_joint.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_true-vs-pred.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_joint.png" alt="Mountains" width="200"/>
+</p>
 
 #### Cold target split
+<p>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png//davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" alt="Snow" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" alt="Forest" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_true-vs-pred.png" alt="Mountains" width="200">
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_joint.png" alt="Mountains" width="200"/>
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_true-vs-pred.png" alt="Mountains" width="200" />
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_joint.png" alt="Mountains" width="200"/>
+<p/>
 
 
 
