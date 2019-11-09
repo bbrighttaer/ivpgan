@@ -248,44 +248,32 @@ This repository contains the accompanying codes and other ancillary files of the
 </table>
 
 ## Qualitative results
-<style>
-.column {
-  float: left;
-  width: 16%;
-  padding: 5px;
-}
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
 ### Davis
 
 #### Warm split
 <div class="row">
     <!-- ecfp -->
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="Snow" style="width:100%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="Snow" style="width:16%">
   </div>
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" style="width:75%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" style="width:16%">
   </div>
     <!-- graphconv -->
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" style="width:100%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" style="width:16%">
   </div>
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" style="width:75%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" style="width:16%">
   </div>
   
     <!-- ivpgan -->
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="Mountains" style="width:100%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="Mountains" style="width:16%">
   </div>
   <div class="column">
-    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="Mountains" style="width:75%">
+    <img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="Mountains" style="width:16%">
   </div>
 </div>
 
