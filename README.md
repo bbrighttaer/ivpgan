@@ -250,10 +250,10 @@ This repository contains the accompanying codes and other ancillary files of the
 ## Qualitative results
 <style>
     .scatter_plt {
-    max-width: 300px;
+    max-width: 120px;
 }
 .joint_plt {
-    max-width: 230px;
+    max-width: 100px;
 }
 </style>
 ### Davis
