@@ -248,7 +248,11 @@ This repository contains the accompanying codes and other ancillary files of the
 </table>
 
 ## Qualitative results
-
+var md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typography: true
+}).use(require('markdown-it-imsize')); 
 ### Davis
 
 #### Warm split
