@@ -33,41 +33,41 @@ This repository contains the accompanying codes and other ancillary files of the
 </thead>
 <tbody>
 	<tr>
-		<td><b>Dataset<b/></td>
-		<td><b>CV split type<b/></td>
-		<td><b>ECFP8<b/></td>
-		<td><b>GraphConv<b/></td>
-		<td><b>IVGPAN<b/></td>
+		<td><b>Dataset</b></td>
+		<td><b>CV split type</b></td>
+		<td><b>ECFP8</b></td>
+		<td><b>GraphConv</b></td>
+		<td><b>IVGPAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
 		<td>Warm</td>
 		<td>0.2216 &plusmn; 0.082</td>
 		<td>0.3537 &plusmn; 0.053</td>
-		<td><b>0.2014<b/>&plusmn; 0.043</td>
+		<td><b>0.2014</b>&plusmn; 0.043</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
 		<td>0.3978 &plusmn; 0.105</td>
 		<td>0.4751 &plusmn; 0.123</td>
-		<td><b>0.2895<b/> &plusmn; 0.163</td>
+		<td><b>0.2895</b> &plusmn; 0.163</td>
 	</tr>
 	<tr>
 		<td>Cold target</td>
 		<td>0.5517 &plusmn; 0.088</td>
 		<td>0.5752 &plusmn; 0.101</td>
-		<td><b>0.2202<b/>&plusmn; 0.139</td>
+		<td><b>0.2202</b>&plusmn; 0.139</td>
 	</tr>
 	<tr>
 		<td rowspan=3>Metz</td>
 		<td>Warm</td>
-		<td><b>0.3321<b/>&plusmn; 0.057</td>
+		<td><b>0.3321</b>&plusmn; 0.057</td>
 		<td>0.5537 &plusmn; 0.033</td>
 		<td>0.5529 &plusmn; 0.033</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.3778<b/>&plusmn; 0.097</td>
+		<td><b>0.3778</b>&plusmn; 0.097</td>
 		<td>0.5711&plusmn; 0.057</td>
 		<td>0.5477 &plusmn; 0.064</td>
 	</tr>
@@ -75,18 +75,18 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6998 &plusmn; 0.065</td>
 		<td>0.7398 &plusmn; 0.047</td>
-		<td><b>0.5745<b/> &plusmn; 0.054</td>
+		<td><b>0.5745</b> &plusmn; 0.054</td>
 	</tr>
 	<tr>
 		<td rowspan=3>KIBA</td>
 		<td>Warm</td>
 		<td>0.4350 &plusmn; 0.086</td>
 		<td>0.5604 &plusmn; 0.120</td>
-		<td><b>0.4003<b/> 0.082</td>
+		<td><b>0.4003</b> 0.082</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.4502<b/> &plusmn; 0.128</td>
+		<td><b>0.4502</b> &plusmn; 0.128</td>
 		<td>0.552 &plusmn; 0.156</td>
 		<td>0.4690 &plusmn; 0.132</td>
 	</tr>
@@ -94,7 +94,7 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6645 &plusmn; 0.137</td>
 		<td>0.7555 &plusmn; 0.153</td>
-		<td><b>0.4486<b/>&plusmn; 0.106</td>
+		<td><b>0.4486</b>&plusmn; 0.106</td>
 	</tr>
 </tbody>
 </table>
@@ -107,41 +107,41 @@ This repository contains the accompanying codes and other ancillary files of the
 </thead>
 <tbody>
 	<tr>
-		<td><b>Dataset<b/></td>
-		<td><b>CV split type<b/></td>
-		<td><b>ECFP8<b/></td>
-		<td><b>GraphConv<b/></td>
-		<td><b>IVGPAN<b/></td>
+		<td><b>Dataset</b></td>
+		<td><b>CV split type</b></td>
+		<td><b>ECFP8</b></td>
+		<td><b>GraphConv</b></td>
+		<td><b>IVGPAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
 		<td>Warm</td>
 		<td>0.2216 &plusmn; 0.082</td>
 		<td>0.3537 &plusmn; 0.053</td>
-		<td><b>0.2014<b/>&plusmn; 0.043</td>
+		<td><b>0.2014</b>&plusmn; 0.043</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
 		<td>0.3978 &plusmn; 0.105</td>
 		<td>0.4751 &plusmn; 0.123</td>
-		<td><b>0.2895<b/> &plusmn; 0.163</td>
+		<td><b>0.2895</b> &plusmn; 0.163</td>
 	</tr>
 	<tr>
 		<td>Cold target</td>
 		<td>0.5517 &plusmn; 0.088</td>
 		<td>0.5752 &plusmn; 0.101</td>
-		<td><b>0.2202<b/>&plusmn; 0.139</td>
+		<td><b>0.2202</b>&plusmn; 0.139</td>
 	</tr>
 	<tr>
 		<td rowspan=3>Metz</td>
 		<td>Warm</td>
-		<td><b>0.3321<b/>&plusmn; 0.057</td>
+		<td><b>0.3321</b>&plusmn; 0.057</td>
 		<td>0.5537 &plusmn; 0.033</td>
 		<td>0.5529 &plusmn; 0.033</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.3778<b/>&plusmn; 0.097</td>
+		<td><b>0.3778</b>&plusmn; 0.097</td>
 		<td>0.5711&plusmn; 0.057</td>
 		<td>0.5477 &plusmn; 0.064</td>
 	</tr>
@@ -149,18 +149,18 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6998 &plusmn; 0.065</td>
 		<td>0.7398 &plusmn; 0.047</td>
-		<td><b>0.5745<b/> &plusmn; 0.054</td>
+		<td><b>0.5745</b> &plusmn; 0.054</td>
 	</tr>
 	<tr>
 		<td rowspan=3>KIBA</td>
 		<td>Warm</td>
 		<td>0.4350 &plusmn; 0.086</td>
 		<td>0.5604 &plusmn; 0.120</td>
-		<td><b>0.4003<b/> 0.082</td>
+		<td><b>0.4003</b> 0.082</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.4502<b/> &plusmn; 0.128</td>
+		<td><b>0.4502</b> &plusmn; 0.128</td>
 		<td>0.552 &plusmn; 0.156</td>
 		<td>0.4690 &plusmn; 0.132</td>
 	</tr>
@@ -168,7 +168,7 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6645 &plusmn; 0.137</td>
 		<td>0.7555 &plusmn; 0.153</td>
-		<td><b>0.4486<b/>&plusmn; 0.106</td>
+		<td><b>0.4486</b>&plusmn; 0.106</td>
 	</tr>
 </tbody>
 </table>
@@ -181,41 +181,41 @@ This repository contains the accompanying codes and other ancillary files of the
 </thead>
 <tbody>
 	<tr>
-		<td><b>Dataset<b/></td>
-		<td><b>CV split type<b/></td>
-		<td><b>ECFP8<b/></td>
-		<td><b>GraphConv<b/></td>
-		<td><b>IVGPAN<b/></td>
+		<td><b>Dataset</b></td>
+		<td><b>CV split type</b></td>
+		<td><b>ECFP8</b></td>
+		<td><b>GraphConv</b></td>
+		<td><b>IVGPAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
 		<td>Warm</td>
 		<td>0.2216 &plusmn; 0.082</td>
 		<td>0.3537 &plusmn; 0.053</td>
-		<td><b>0.2014<b/>&plusmn; 0.043</td>
+		<td><b>0.2014</b>&plusmn; 0.043</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
 		<td>0.3978 &plusmn; 0.105</td>
 		<td>0.4751 &plusmn; 0.123</td>
-		<td><b>0.2895<b/> &plusmn; 0.163</td>
+		<td><b>0.2895</b> &plusmn; 0.163</td>
 	</tr>
 	<tr>
 		<td>Cold target</td>
 		<td>0.5517 &plusmn; 0.088</td>
 		<td>0.5752 &plusmn; 0.101</td>
-		<td><b>0.2202<b/>&plusmn; 0.139</td>
+		<td><b>0.2202</b>&plusmn; 0.139</td>
 	</tr>
 	<tr>
 		<td rowspan=3>Metz</td>
 		<td>Warm</td>
-		<td><b>0.3321<b/>&plusmn; 0.057</td>
+		<td><b>0.3321</b>&plusmn; 0.057</td>
 		<td>0.5537 &plusmn; 0.033</td>
 		<td>0.5529 &plusmn; 0.033</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.3778<b/>&plusmn; 0.097</td>
+		<td><b>0.3778</b>&plusmn; 0.097</td>
 		<td>0.5711&plusmn; 0.057</td>
 		<td>0.5477 &plusmn; 0.064</td>
 	</tr>
@@ -223,18 +223,18 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6998 &plusmn; 0.065</td>
 		<td>0.7398 &plusmn; 0.047</td>
-		<td><b>0.5745<b/> &plusmn; 0.054</td>
+		<td><b>0.5745</b> &plusmn; 0.054</td>
 	</tr>
 	<tr>
 		<td rowspan=3>KIBA</td>
 		<td>Warm</td>
 		<td>0.4350 &plusmn; 0.086</td>
 		<td>0.5604 &plusmn; 0.120</td>
-		<td><b>0.4003<b/> 0.082</td>
+		<td><b>0.4003</b> 0.082</td>
 	</tr>
 	<tr>
 		<td>Cold drug</td>
-		<td><b>0.4502<b/> &plusmn; 0.128</td>
+		<td><b>0.4502</b> &plusmn; 0.128</td>
 		<td>0.552 &plusmn; 0.156</td>
 		<td>0.4690 &plusmn; 0.132</td>
 	</tr>
@@ -242,24 +242,34 @@ This repository contains the accompanying codes and other ancillary files of the
 		<td>Cold target</td>
 		<td>0.6645 &plusmn; 0.137</td>
 		<td>0.7555 &plusmn; 0.153</td>
-		<td><b>0.4486<b/>&plusmn; 0.106</td>
+		<td><b>0.4486</b>&plusmn; 0.106</td>
 	</tr>
 </tbody>
 </table>
 
 ## Qualitative results
+<style>
+    .scatter_plt {
+    max-width: 300px;
+}
+.joint_plt {
+    max-width: 230px;
+}
+</style>
 ### Davis
 #### ECFP8-PSC
 ##### Warm
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png)
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png)
-##### Cold drug
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png)
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png)
-##### Cold target
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png)
-![](proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png)
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" class="scatter_plt"/>
 
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" class="joint_plt"/>
+
+##### Cold drug
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" class="scatter_plt" />
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" class="joint_plt"/>
+
+##### Cold target
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" class="scatter_plt"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" class="joint_plt" />
 
 
 # Credits
