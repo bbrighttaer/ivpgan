@@ -15,7 +15,7 @@ import torch
 import torch.nn as nn
 from torch_scatter import scatter_add, scatter_max
 
-from adgcca.utils.math import segment_sum
+from ivpgan.utils.math import segment_sum
 
 
 def _proc_segment_ids(data, segment_ids):
@@ -30,7 +30,7 @@ def _proc_segment_ids(data, segment_ids):
 
 
 def check_cuda(tensor):
-    from adgcca import cuda
+    from ivpgan import cuda
     if cuda:
         return tensor.cuda()
     else:

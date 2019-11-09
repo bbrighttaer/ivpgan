@@ -24,10 +24,9 @@
 *.mod
 
 # analysis plots
-proj/**/analysis/**/*.pdf
-proj/**/analysis/**/*.png
-
-proj/**/analysis/**/*.txt
+#proj/**/analysis/**/*.pdf
+#proj/**/analysis/**/*.png
+#proj/**/analysis/**/*.txt
 
 # Generated files
 .idea/**/contentModel.xml

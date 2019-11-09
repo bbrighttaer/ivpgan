@@ -1,5 +1,5 @@
 # Author: bbrighttaer
-# Project: jova
+# Project: ivpgan
 # Date: 5/23/19
 # Time: 10:30 AM
 # File: __init__.py.py
