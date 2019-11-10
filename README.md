@@ -298,7 +298,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 <p/>
 
 # Credits
-We would like to acknowledge the authors of the PADME project for their work. Our project uses the data loading and metric procedures published by their work and we're grateful. We also acknowledge the authors and contributors of the DeepChem project for their works on Graph Convolution, Weave, and other featurization schemes; the `GraphConv` and `Weave` implementations are basically our Pytorch translations of their initial implementations.
+We would like to acknowledge the authors of the PADME project for their work. Our project uses the data, data loading, and metric procedures published by their work and we're grateful. We also acknowledge the authors and contributors of the DeepChem project for their implementations of the Graph Convolution, Weave, and other featurization schemes; the `GraphConv` and `Weave` implementations in this work are basically our Pytorch translations of their initial implementations.
 
 # Cite
 ```bibitem
