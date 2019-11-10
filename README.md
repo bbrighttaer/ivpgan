@@ -18,6 +18,7 @@ This repository contains the accompanying codes and other ancillary files of the
 | Pandas         |  >= 0.25.0                                        |
 | Seaborn        |  0.9.0                                        |
 | Soek           |  [See the Soek project](https://github.com/bbrighttaer/soek)                                        |
+|torch-scatter | >= 1.3.1 |
 > **Note:** The `dcCustom` package of the [PADME project](https://github.com/simonfqy/PADME) has been refactored to have the new package name `padme` in this project and should not be misunderstood with any other module which may be bearing the same name. We took this decision in order to enhance clarity in our work by calling it the name given to it by its authors.
 
 # Usage
@@ -301,7 +302,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 We would like to acknowledge the authors of the PADME project for their work. Our project uses the data, data loading, and metric procedures published by their work and we're grateful. We also acknowledge the authors and contributors of the DeepChem project for their implementations of the Graph Convolution, Weave, and other featurization schemes; the `GraphConv` and `Weave` implementations in this work are basically our Pytorch translations of their initial implementations.
 
 # Cite
-```bibitem
+```latex
 @inproceedings{Agyemang2019,
 author = {Agyemang, Brighter and Wei-Ping, Wu and Kpiebaareh, Michael Y. and Nanor, Ebenezer},
 title = {Drug-Target Indication Prediction by Integrating End-to-End Learning and Fingerprints},
