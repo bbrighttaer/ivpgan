@@ -330,6 +330,40 @@ structure to aggregate all training and evaluation statistics which are then sav
 <img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_cold_target_eval_2019_08_11__14_57_42_joint.png" alt="" width="200"/>
 </p>
 
+
+
+### KIBA
+
+#### Warm split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_warm_eval_2019_08_11__20_45_27_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_warm_eval_2019_08_11__20_45_27_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_warm_eval_2019_08_11__21_44_33_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_warm_eval_2019_08_11__21_44_33_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_warm_eval_2019_08_11__20_53_42_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_warm_eval_2019_08_11__20_53_42_joint.png" alt="" width="200"/>
+</p>
+
+#### Cold drug split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_cold_drug_eval_2019_08_11__20_45_47_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_cold_drug_eval_2019_08_11__20_45_47_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_cold_drug_eval_2019_08_11__21_47_27_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_cold_drug_eval_2019_08_11__21_47_27_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_cold_drug_eval_2019_08_11__20_53_51_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_cold_drug_eval_2019_08_11__20_53_51_joint.png" alt="" width="200"/>
+</p>
+
+#### Cold target split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_cold_target_eval_2019_08_11__20_45_56_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_ecfp8_cold_target_eval_2019_08_11__20_45_56_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_cold_target_eval_2019_08_11__21_47_38_true-vs-pred.png" alt="" width="200">
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_gconv_cold_target_eval_2019_08_11__21_47_38_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_cold_target_eval_2019_08_11__20_53_55_true-vs-pred.png" alt="" width="200" />
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/kiba_integrated_view_gan_cold_target_eval_2019_08_11__20_53_55_joint.png" alt="" width="200"/>
+</p>
+
 # Credits
 We would like to acknowledge the authors of the PADME project for their work. Our project uses the data, data loading, and metric procedures published by their work and we're grateful. We also acknowledge the authors and contributors of the DeepChem project for their implementations of the Graph Convolution, Weave, and other featurization schemes; the `GraphConv` and `Weave` implementations in this work are basically our Pytorch translations of their initial implementations.
 
