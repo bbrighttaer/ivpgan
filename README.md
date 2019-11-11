@@ -190,7 +190,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 <table>
 <thead>
 	<tr>
-		<th colspan=5>R<sup>2<sup/></th>
+		<th colspan=5>R<sup>2</sup></th>
 	</tr>
 </thead>
 <tbody>
@@ -270,33 +270,65 @@ structure to aggregate all training and evaluation statistics which are then sav
 
 #### Warm split
 <p>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="Snow" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="Forest" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="Mountains" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_warm_eval_2019_08_11__11_57_36_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_warm_eval_2019_08_11__12_30_23_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_warm_eval_2019_08_11__13_45_24_joint.png" alt="" width="200"/>
 </p>
 
 #### Cold drug split
 <p>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" alt="Snow" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" alt="Forest" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_true-vs-pred.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_joint.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_true-vs-pred.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_joint.png" alt="Mountains" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_drug_eval_2019_08_11__12_03_23_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_drug_eval_2019_08_11__13_10_25_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_drug_eval_2019_08_11__13_46_28_joint.png" alt="" width="200"/>
 </p>
 
 #### Cold target split
 <p>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png//davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" alt="Snow" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" alt="Forest" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_true-vs-pred.png" alt="Mountains" width="200">
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_joint.png" alt="Mountains" width="200"/>
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_true-vs-pred.png" alt="Mountains" width="200" />
-<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_joint.png" alt="Mountains" width="200"/>
-<p/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_ecfp8_cold_target_eval_2019_08_11__12_09_11_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_true-vs-pred.png" alt="" width="200">
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_gconv_cold_target_eval_2019_08_11__13_49_01_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_true-vs-pred.png" alt="" width="200" />
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/davis_integrated_view_gan_cold_target_eval_2019_08_11__13_46_43_joint.png" alt="" width="200"/>
+</p>
+
+### Metz
+
+#### Warm split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_warm_eval_2019_08_11__13_59_37_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_warm_eval_2019_08_11__13_59_37_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_warm_eval_2019_08_11__14_11_54_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_warm_eval_2019_08_11__14_11_54_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_warm_eval_2019_08_11__14_46_29_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_warm_eval_2019_08_11__14_46_29_joint.png" alt="" width="200"/>
+</p>
+
+#### Cold drug split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_cold_drug_eval_2019_08_11__14_00_34_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_cold_drug_eval_2019_08_11__14_00_34_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_cold_drug_eval_2019_08_11__16_01_53_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_cold_drug_eval_2019_08_11__16_01_53_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_cold_drug_eval_2019_08_11__14_57_48_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_cold_drug_eval_2019_08_11__14_57_48_joint.png" alt="" width="200"/>
+</p>
+
+#### Cold target split
+<p>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_cold_target_eval_2019_08_11__13_58_35_true-vs-pred.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_ecfp8_cold_target_eval_2019_08_11__13_58_35_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_cold_target_eval_2019_08_11__14_58_05_true-vs-pred.png" alt="" width="200">
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_gconv_cold_target_eval_2019_08_11__14_58_05_joint.png" alt="" width="200"/>
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_cold_target_eval_2019_08_11__14_57_42_true-vs-pred.png" alt="" width="200" />
+<img src="proj/dti/analysis/results_eval_2019_08_11_png/metz_integrated_view_gan_cold_target_eval_2019_08_11__14_57_42_joint.png" alt="" width="200"/>
+</p>
 
 # Credits
 We would like to acknowledge the authors of the PADME project for their work. Our project uses the data, data loading, and metric procedures published by their work and we're grateful. We also acknowledge the authors and contributors of the DeepChem project for their implementations of the Graph Convolution, Weave, and other featurization schemes; the `GraphConv` and `Weave` implementations in this work are basically our Pytorch translations of their initial implementations.
