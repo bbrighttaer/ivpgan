@@ -51,7 +51,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 		<td><b>CV split type</b></td>
 		<td><b>ECFP8</b></td>
 		<td><b>GraphConv</b></td>
-		<td><b>IVGPAN</b></td>
+		<td><b>IVPGAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
@@ -125,7 +125,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 		<td><b>CV split type</b></td>
 		<td><b>ECFP8</b></td>
 		<td><b>GraphConv</b></td>
-		<td><b>IVGPAN</b></td>
+		<td><b>IVPGAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
@@ -199,7 +199,7 @@ structure to aggregate all training and evaluation statistics which are then sav
 		<td><b>CV split type</b></td>
 		<td><b>ECFP8</b></td>
 		<td><b>GraphConv</b></td>
-		<td><b>IVGPAN</b></td>
+		<td><b>IVPGAN</b></td>
 	</tr>
 	<tr>
 		<td rowspan=3>Davis</td>
