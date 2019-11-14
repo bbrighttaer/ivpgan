@@ -19,6 +19,7 @@ This repository contains the accompanying codes and other ancillary files of the
 | Seaborn        |  0.9.0                                        |
 | Soek           |  [See the Soek project](https://github.com/bbrighttaer/soek)                                        |
 |torch-scatter | >= 1.3.1 |
+|tqdm           | >= 4.x |
 > **Note:** The `dcCustom` package of the [PADME project](https://github.com/simonfqy/PADME) has been refactored to have the new package name `padme` in this project and should not be misunderstood with any other module which may be bearing the same name. We took this decision in order to enhance clarity in our work by calling it the name given to it by its authors.
 
 # Usage
