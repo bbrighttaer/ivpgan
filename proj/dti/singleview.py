@@ -270,7 +270,7 @@ class SingleViewDTI(Trainer):
 
     @staticmethod
     def train(eval_fn, model, optimizer, data_loaders, metrics, transformers_dict, prot_desc_dict, tasks, view,
-              n_iters=5000, sim_data_node=None):
+              n_iters=5000, is_hsearch=False, sim_data_node=None):
         start = time.time()
         best_model_wts = model.state_dict()
         best_score = -10000
@@ -293,7 +293,7 @@ class SingleViewDTI(Trainer):
 
         # Main training loop
         for epoch in range(n_epochs):
-            for phase in ["train", "val"]:
+            for phase in ["train", "val" if is_hsearch else "test"]:
                 if phase == "train":
                     print("Training....")
                     # Training mode
@@ -532,6 +532,7 @@ def main(flags):
                 extra_train_args = {"transformers_dict": transformers_dict,
                                     "prot_desc_dict": prot_desc_dict,
                                     "tasks": tasks,
+                                    "is_hsearch": True,
                                     "n_iters": 10000,
                                     "view": view}
 

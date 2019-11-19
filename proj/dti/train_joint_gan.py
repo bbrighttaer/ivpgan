@@ -230,7 +230,7 @@ class IntegratedViewDTI(Trainer):
 
     @staticmethod
     def train(eval_fn, models, optimizers, data_loaders, metrics, weighted_loss, neigh_dist, transformers_dict,
-              prot_desc_dict, tasks, n_iters=5000, sim_data_node=None):
+              prot_desc_dict, tasks, n_iters=5000, is_hsearch=False, sim_data_node=None):
         generator, discriminator = models
         optimizer_gen, optimizer_disc = optimizers
 
@@ -266,7 +266,7 @@ class IntegratedViewDTI(Trainer):
 
         # Main training loop
         for epoch in range(n_epochs):
-            for phase in ["train", "val"]:
+            for phase in ["train", "val" if is_hsearch else "test"]:
                 if phase == "train":
                     print("Training....")
                     # Adjust the learning rate.
@@ -564,6 +564,7 @@ def main(flags):
                 extra_train_args = {"transformers_dict": transformers_dict,
                                     "prot_desc_dict": prot_desc_dict,
                                     "tasks": tasks,
+                                    "is_hsearch": True,
                                     "n_iters": 3000}
 
                 hparams_conf = get_hparam_config(flags)
