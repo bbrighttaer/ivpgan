@@ -108,10 +108,11 @@ class Splitter(object):
 
         log("Computing K-fold split", self.verbose)
         if directories is None:
-            directories = [tempfile.mkdtemp() for _ in range(2 * k)]
+            directories = [tempfile.mkdtemp() for _ in range(3 * k)]
         else:
-            assert len(directories) == 2 * k
+            assert len(directories) == 3 * k
         cv_datasets = []
+        test_datasets = []
         train_ds_base = None
         train_datasets = []
         # rem_dataset is remaining portion of dataset
@@ -127,15 +128,22 @@ class Splitter(object):
             # to k-1.
             self.current_fold_ind = fold
             frac_fold = 1. / (k - fold)
-            train_dir, cv_dir = directories[2 * fold], directories[2 * fold + 1]
-            fold_inds, rem_inds, _ = self.split(rem_dataset,
-                                                frac_train=frac_fold,
-                                                frac_valid=1 - frac_fold,
-                                                frac_test=0,
-                                                seed=seed)
+            train_dir, cv_dir, test_dir = directories[3 * fold], directories[3 * fold + 1], directories[3 * fold + 2]
+            cv_inds, rem_inds, _ = self.split(rem_dataset,
+                                              frac_train=frac_fold,
+                                              frac_valid=1 - frac_fold,
+                                              frac_test=0,
+                                              seed=seed)
+            # divide the cv individuals into val and test sets
+            cv_inds = np.array(list(cv_inds))
+            test_inds = set(np.random.choice(cv_inds, len(cv_inds) // 2, replace=False))
+            val_inds = set(cv_inds)
+            val_inds = val_inds.difference(test_inds)
+            assert len(val_inds & test_inds) == 0
             self.split_warm = False  # self.split_warm is only useful in the first time.
             self.threshold = 0  # Filtering is done after the first split.
-            cv_dataset = rem_dataset.select(fold_inds, select_dir=cv_dir)
+            val_dataset = rem_dataset.select(val_inds, select_dir=cv_dir)
+            test_dataset = rem_dataset.select(test_inds, select_dir=test_dir)
             rem_dataset = rem_dataset.select(rem_inds)
 
             train_ds_to_merge = filter(lambda x: x is not None,
@@ -145,13 +153,14 @@ class Splitter(object):
             train_datasets.append(train_dataset)
 
             update_train_base_merge = filter(lambda x: x is not None,
-                                             [train_ds_base, cv_dataset])
+                                             [train_ds_base, val_dataset, test_dataset])
             train_ds_base = DiskDataset.merge(update_train_base_merge)
             if self.oversampled:
-                cv_dataset = cv_dataset.get_unique_pairs()
+                val_dataset = val_dataset.get_unique_pairs()
                 # pdb.set_trace()
-            cv_datasets.append(cv_dataset)
-        return list(zip(train_datasets, cv_datasets))
+            cv_datasets.append(val_dataset)
+            test_datasets.append(test_dataset)
+        return list(zip(train_datasets, cv_datasets, test_datasets))
 
     # HACK: I only did oversampled dataset handling for k-fold split.
     def train_valid_test_split(self,

@@ -10,12 +10,13 @@ import padme
 import pandas as pd
 
 import ivpgan.splits as splits
+from ivpgan.utils.io import load_nested_cv_dataset_from_disk, save_nested_cv_dataset_to_disk
 
 
 def load_kiba(featurizer='Weave', cross_validation=False, test=False, split='random',
-               reload=True, K=5, mode='regression', predict_cold=False, cold_drug=False,
-               cold_target=False, cold_drug_cluster=False, split_warm=False, filter_threshold=0,
-               prot_seq_dict=None, currdir="./", oversampled=False, input_protein=True, seed=0):
+              reload=True, K=5, mode='regression', predict_cold=False, cold_drug=False,
+              cold_target=False, cold_drug_cluster=False, split_warm=False, filter_threshold=0,
+              prot_seq_dict=None, currdir="./", oversampled=False, input_protein=True, seed=0):
     # The last parameter means only splitting into training and validation sets.
 
     if cross_validation:
@@ -60,8 +61,7 @@ def load_kiba(featurizer='Weave', cross_validation=False, test=False, split='ran
         if cross_validation:
             delim = "_CV" + delim
             save_dir = os.path.join(data_dir, featurizer + delim + mode + "/" + split + "_seed_" + str(seed))
-            loaded, all_dataset, transformers = padme.utils.save.load_cv_dataset_from_disk(
-                save_dir, K)
+            loaded, all_dataset, transformers = load_nested_cv_dataset_from_disk(save_dir, K)
         else:
             save_dir = os.path.join(data_dir, featurizer + delim + mode + "/" + split + "_seed_" + str(seed))
             loaded, all_dataset, transformers = padme.utils.save.load_dataset_from_disk(
@@ -120,7 +120,7 @@ def load_kiba(featurizer='Weave', cross_validation=False, test=False, split='ran
         fold_datasets = splitter.k_fold_split(dataset, K, seed=seed)
         all_dataset = fold_datasets
         if reload:
-            padme.utils.save.save_cv_dataset_to_disk(save_dir, all_dataset, K, transformers)
+            save_nested_cv_dataset_to_disk(save_dir, all_dataset, K, transformers)
 
     else:
         # not cross validating, and not testing.

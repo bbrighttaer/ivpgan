@@ -250,7 +250,10 @@ class SingleViewDTI(Trainer):
             valid_dataset = DtiDataset(x_s=[data[1][fold][1].X for data in data_dict.values()],
                                        y_s=[data[1][fold][1].y for data in data_dict.values()],
                                        w_s=[data[1][fold][1].w for data in data_dict.values()])
-            data = {"train": train_dataset, "val": valid_dataset, "test": None}
+            test_dataset = DtiDataset(x_s=[data[1][fold][2].X for data in data_dict.values()],
+                                      y_s=[data[1][fold][2].y for data in data_dict.values()],
+                                      w_s=[data[1][fold][2].w for data in data_dict.values()])
+            data = {"train": train_dataset, "val": valid_dataset, "test": test_dataset}
         return data
 
     @staticmethod
@@ -410,7 +413,7 @@ class SingleViewDTI(Trainer):
         # Main evaluation loop
         for epoch in range(n_epochs):
 
-            for phase in ["val"]:  # ["train", "val"]:
+            for phase in ["test"]:  # ["train", "val"]:
                 # Iterate through mini-batches
                 i = 0
                 for batch in tqdm(data_loaders[phase]):
