@@ -229,7 +229,7 @@ class IntegratedViewDTI(Trainer):
         return score
 
     @staticmethod
-    def train(eval_fn, models, optimizers, data_loaders, metrics, weighted_loss, neigh_dist, transformers_dict,
+    def train(models, optimizers, data_loaders, metrics, weighted_loss, neigh_dist, transformers_dict,
               prot_desc_dict, tasks, n_iters=5000, is_hsearch=False, sim_data_node=None):
         generator, discriminator = models
         optimizer_gen, optimizer_disc = optimizers
@@ -299,8 +299,8 @@ class IntegratedViewDTI(Trainer):
                             Xs["gconv"] = x
                         else:
                             Xs[view_name] = view_data[0]
-                        Ys[view_name] = view_data[1]
-                        Ws[view_name] = view_data[2].reshape(-1, 1).astype(np.float)
+                        Ys[view_name] = np.array([k for k in view_data[1]], dtype=np.float)
+                        Ws[view_name] = np.array([k for k in view_data[2]], dtype=np.float)
 
                     optimizer_gen.zero_grad()
                     optimizer_disc.zero_grad()
@@ -313,18 +313,21 @@ class IntegratedViewDTI(Trainer):
                         for j in range(1, len(Ys.values())):
                             assert (list(Ys.values())[j - 1] == list(Ys.values())[j]).all()
 
-                        y = Ys["gconv"]
-                        w = Ws["gconv"]
+                        y = Ys[list(Xs.keys())[0]]
+                        w = Ws[list(Xs.keys())[0]]
                         X = ((Xs["gconv"][0], Xs["ecfp8"][0]), Xs["gconv"][1])
 
                         outputs = generator(X)
-                        target = torch.from_numpy(y).view(-1, 1).float()
+                        target = torch.from_numpy(y).float()
+                        weights = torch.from_numpy(w).float()
                         valid = torch.ones_like(target).float()
                         fake = torch.zeros_like(target).float()
                         if cuda:
                             target = target.cuda()
+                            weights = weights.cuda()
                             valid = valid.cuda()
                             fake = fake.cuda()
+                        outputs = outputs * weights
                         pred_loss = prediction_criterion(outputs, target)
 
                     if phase == "train":
@@ -366,7 +369,8 @@ class IntegratedViewDTI(Trainer):
                     else:
                         if str(pred_loss.item()) != "nan":  # useful in hyperparameter search
                             eval_dict = {}
-                            score = eval_fn(eval_dict, y, outputs, w, metrics, tasks, transformers_dict["gconv"])
+                            score = IntegratedViewDTI.evaluate(eval_dict, y, outputs, w, metrics, tasks,
+                                                               transformers_dict["gconv"])
                             # for epoch stats
                             epoch_scores.append(score)
 
@@ -400,10 +404,10 @@ class IntegratedViewDTI(Trainer):
         duration = time.time() - start
         print('\nModel training duration: {:.0f}m {:.0f}s'.format(duration // 60, duration % 60))
         generator.load_state_dict(best_model_wts)
-        return generator, best_score, best_epoch
+        return {'model': generator, 'score': best_score, 'epoch': best_epoch}
 
     @staticmethod
-    def evaluate_model(eval_fn, model, model_dir, model_name, data_loaders, metrics, transformers_dict, prot_desc_dict,
+    def evaluate_model(model, model_dir, model_name, data_loaders, metrics, transformers_dict, prot_desc_dict,
                        tasks, sim_data_node=None):
         # load saved model and put in evaluation mode
         model.load_state_dict(load_model(model_dir, model_name))
@@ -450,8 +454,8 @@ class IntegratedViewDTI(Trainer):
                             Xs["gconv"] = x
                         else:
                             Xs[view_name] = view_data[0]
-                        Ys[view_name] = view_data[1]
-                        Ws[view_name] = view_data[2].reshape(-1, 1).astype(np.float)
+                        Ys[view_name] = np.array([k for k in view_data[1]], dtype=np.float)
+                        Ws[view_name] = np.array([k for k in view_data[2]], dtype=np.float)
 
                     # forward propagation
                     with torch.set_grad_enabled(False):
@@ -460,19 +464,24 @@ class IntegratedViewDTI(Trainer):
                         for i in range(1, len(Ys.values())):
                             assert (list(Ys.values())[i - 1] == list(Ys.values())[i]).all()
 
-                        y_true = Ys["gconv"]
-                        w = Ws["gconv"]
+                        y = Ys[list(Xs.keys())[0]]
+                        w = Ws[list(Xs.keys())[0]]
                         X = ((Xs["gconv"][0], Xs["ecfp8"][0]), Xs["gconv"][1])
                         y_predicted = model(X)
+                        weights = torch.from_numpy(w).float()
+                        if cuda:
+                            weights = weights.cuda()
+                        y_predicted = y_predicted * weights
 
                         # apply transformers
                         predicted_vals.extend(undo_transforms(y_predicted.cpu().detach().numpy(),
                                                               transformers_dict["gconv"]).squeeze().tolist())
                         true_vals.extend(
-                            undo_transforms(y_true, transformers_dict["gconv"]).astype(np.float).squeeze().tolist())
+                            undo_transforms(y, transformers_dict["gconv"]).astype(np.float).squeeze().tolist())
 
                     eval_dict = {}
-                    score = eval_fn(eval_dict, y_true, y_predicted, w, metrics, tasks, transformers_dict["gconv"])
+                    score = IntegratedViewDTI.evaluate(eval_dict, y, y_predicted, w, metrics, tasks,
+                                                       transformers_dict["gconv"])
 
                     # for sim data resource
                     scores_lst.append(score)
@@ -578,7 +587,6 @@ def main(flags):
                                            initializer=trainer.initialize,
                                            data_provider=trainer.data_provider,
                                            train_fn=trainer.train,
-                                           eval_fn=trainer.evaluate,
                                            save_model_fn=io.save_model,
                                            init_args=extra_init_args,
                                            data_args=extra_data_args,
@@ -625,14 +633,13 @@ def start_fold(sim_data_node, data_dict, flags, hyper_params, prot_desc_dict, ta
                                                                                             val_dataset=data["val"],
                                                                                             test_dataset=data["test"])
     if flags["eval"]:
-        trainer.evaluate_model(trainer.evaluate, model[0], flags["model_dir"], flags["eval_model_name"],
-                               data_loaders, metrics, transformers_dict,
-                               prot_desc_dict, tasks, sim_data_node=sim_data_node)
+        trainer.evaluate_model(model[0], flags["model_dir"], flags["eval_model_name"], data_loaders, metrics,
+                               transformers_dict, prot_desc_dict, tasks, sim_data_node=sim_data_node)
     else:
         # Train the model
-        model, score, epoch = trainer.train(trainer.evaluate, model, optimizer, data_loaders, metrics, weighted_loss,
-                                            neigh_dist, transformers_dict, prot_desc_dict, tasks, n_iters=10000,
-                                            sim_data_node=sim_data_node)
+        results = trainer.train(model, optimizer, data_loaders, metrics, weighted_loss, neigh_dist, transformers_dict,
+                                prot_desc_dict, tasks, n_iters=10000, sim_data_node=sim_data_node)
+        model, score, epoch = results['model'], results['score'], results['epoch']
         # Save the model.
         split_label = "warm" if flags["split_warm"] else "cold_target" if flags["cold_target"] else "cold_drug" if \
             flags["cold_drug"] else "None"
