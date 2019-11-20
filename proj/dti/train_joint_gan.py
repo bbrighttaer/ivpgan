@@ -523,6 +523,9 @@ def main(flags):
 
     prot_desc_dict, prot_seq_dict = load_proteins(flags['prot_desc_path'])
 
+    # For searching over multiple seeds
+    hparam_search = None
+
     for seed in seeds:
         # for data collection of this round of simulation.
         data_node = DataNode(label="seed_%d" % seed)
@@ -570,35 +573,38 @@ def main(flags):
                                    "cuda_devices": cuda_devices}
                 extra_data_args = {"flags": flags,
                                    "data_dict": data_dict}
+                n_iters = 3000
                 extra_train_args = {"transformers_dict": transformers_dict,
                                     "prot_desc_dict": prot_desc_dict,
                                     "tasks": tasks,
-                                    "is_hsearch": True,
-                                    "n_iters": 3000}
+                                    "n_iters": n_iters,
+                                    "is_hsearch": True}
 
                 hparams_conf = get_hparam_config(flags)
 
-                search_alg = {"random_search": RandomSearchCV,
-                              "bayopt_search": BayesianOptSearchCV}.get(flags["hparam_search_alg"],
-                                                                        BayesianOptSearchCV)
+                if hparam_search is None:
+                    search_alg = {"random_search": RandomSearchCV,
+                                  "bayopt_search": BayesianOptSearchCV}.get(flags["hparam_search_alg"],
+                                                                            BayesianOptSearchCV)
+                    min_opt = "gp"
+                    hparam_search = search_alg(hparam_config=hparams_conf,
+                                               num_folds=k,
+                                               initializer=trainer.initialize,
+                                               data_provider=trainer.data_provider,
+                                               train_fn=trainer.train,
+                                               save_model_fn=io.save_model,
+                                               init_args=extra_init_args,
+                                               data_args=extra_data_args,
+                                               train_args=extra_train_args,
+                                               data_node=data_node,
+                                               split_label=split_label,
+                                               sim_label=sim_label,
+                                               minimizer=min_opt,
+                                               dataset_label=dataset_lbl,
+                                               results_file="{}_{}_dti_{}_{}_{}.csv".format(
+                                                   flags["hparam_search_alg"], sim_label, date_label, min_opt, n_iters))
 
-                hparam_search = search_alg(hparam_config=hparams_conf,
-                                           num_folds=k,
-                                           initializer=trainer.initialize,
-                                           data_provider=trainer.data_provider,
-                                           train_fn=trainer.train,
-                                           save_model_fn=io.save_model,
-                                           init_args=extra_init_args,
-                                           data_args=extra_data_args,
-                                           train_args=extra_train_args,
-                                           data_node=data_node,
-                                           split_label=split_label,
-                                           sim_label=view,
-                                           dataset_label=dataset_lbl,
-                                           results_file="{}_{}_dti_{}.csv".format(flags["hparam_search_alg"], view,
-                                                                                  date_label))
-
-                stats = hparam_search.fit(model_dir="models", model_name="".join(tasks), max_iter=10, seed=seed)
+                stats = hparam_search.fit(model_dir="models", model_name="".join(tasks), max_iter=20, seed=seed)
                 print(stats)
                 print("Best params = {}".format(stats.best(m="max")))
             else:
